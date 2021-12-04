@@ -1,4 +1,8 @@
-add_executable(invalid-index invalid-index.cpp)
-target_link_libraries(invalid-index PRIVATE project_options project_warnings)
-add_executable(uninit-array uninit-array.cpp)
-target_link_libraries(uninit-array PRIVATE project_options project_warnings)
+file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_CURRENT_LIST_DIR} *.cpp)
+
+foreach(ITEM IN LISTS SRC_FILES)
+    string(REGEX REPLACE ".cpp" "" PROJ_NAME ${ITEM})
+    message("Building ${PROJ_NAME}")
+    add_executable(${PROJ_NAME} ${ITEM})
+    target_link_libraries(${PROJ_NAME} PRIVATE project_options project_warnings)
+endforeach()
