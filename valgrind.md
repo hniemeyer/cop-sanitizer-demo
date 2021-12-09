@@ -10,4 +10,5 @@ Thread behavior can be checked via:
 
 ```
 valgrind --tool=drd ./programm
+valgrind --tool=helgrind ./programm
 ```
