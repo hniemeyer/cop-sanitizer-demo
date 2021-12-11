@@ -6,4 +6,4 @@ rm -rf build/
 fi
 echo "Memory Sanitizer"
 cmake -S . -B ./build -GNinja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++ -DENABLE_SANITIZER_MEMORY=ON
-cmake --build ./build -v
+cmake --build ./build
