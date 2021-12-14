@@ -7,7 +7,7 @@ used here can be installed via
 
 ```
 sudo apt update
-sudo apt install g++-10 clang cmake valgrind
+sudo apt install g++-10 clang cmake valgrind ninja-build
 ```
 
 if you are running Ubuntu. 
